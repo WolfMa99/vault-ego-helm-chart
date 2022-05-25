@@ -1,0 +1,13 @@
+apiVersion: v2
+name: vault-ego-helm-chart
+description: Vault EGo Helm Chart
+version: 0.1.0
+type: application
+appVersion: 0.1.0
+home: https://github.com/WolfMa99/vault-ego-helm-chart.git
+keywords:
+  - cloudnative
+  - vault
+  - ego
+  - helm
+  - kubernetes
