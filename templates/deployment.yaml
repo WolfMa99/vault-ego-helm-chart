@@ -18,17 +18,12 @@ spec:
       - key: kubernetes.azure.com/sgx_epc_mem_in_MiB
         operator: Exists
         effect: NoSchedule
-      containers:
-      # This is the image used to run vault with ego. 
-      # You will find the Dockerfile in another section of this project. 
-      # You should build that Dockerfile an push the image to a repository on Docker Hub.       
+      containers:      
       - name: vault-ego-helm-chart
-        image: marvinwolf/ego-vault-test
+        image: marvinwolf/ego-vault-test:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8200
-        - containerPort: 80
-        - containerPort: 443
         resources:
           limits:
             kubernetes.azure.com/sgx_epc_mem_in_MiB: 100
