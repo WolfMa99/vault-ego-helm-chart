@@ -1,6 +1,0 @@
-Vault Ego Helm Chart V0.1.0
-
-Creation of a Deployment and a Service for the Vault Application which runs using the EGo framework for Confidential ´Computing
-
-Chart Deployed: {{ .Chart.Name }} - {{ .Chart.Version }}
-Release Name: {{ .Release.Name }}
