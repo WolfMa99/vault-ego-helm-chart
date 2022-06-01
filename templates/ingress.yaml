@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: vault-ingress
+  namespace: vault
+
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`vault.bachelor.wcrw.de`)
+      kind: Rule
+      services:
+        - name: vault-ego-service
+          port: 8200
+  tls:
+     certResolver: myresolver
