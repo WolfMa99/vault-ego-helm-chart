@@ -21,7 +21,7 @@ spec:
         effect: NoSchedule
       containers:      
       - name: vault-ego-helm-chart
-        image: marvinwolf/ego-vault-test:latest
+        image: marvinwolf/ego-vault-test:new
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8200
